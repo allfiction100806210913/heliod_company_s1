@@ -1,0 +1,33 @@
+h2 {
+  position: relative;
+  height: 75px;
+  margin-right: 100px;
+  padding: 1.5rem 2rem 0 2rem;
+  word-break: break-all;
+  color: #fff;
+  background: #000;
+}
+
+h2:after {
+  position: absolute;
+  top: 0;
+  right: -55px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 75px 55px 0 0;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+h2 span {
+  font-size: 40px;
+  font-size: 4rem;
+  position: absolute;
+  top: 0;
+  right: -100px;
+  display: block;
+  padding-top: 3px;
+  padding-left: 16px;
+  color: #000;
+}
