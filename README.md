@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| player_name        | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :librarys
 
-* Database creation
 
-* Database initialization
+## library table
 
-* How to run the test suite
+| Column                     | Type       | Options                        |
+| ---------------------------| ---------  | ------------------------------ |
+| card_name                  | string     | null: false                    |
+| card_text                  | text       | null: false                    |
+| manacost                   | string     | null: false                    |
+| color                      | string     | null: false                    |
+| power                      | integer    | null: false                    |
+| toughness                  | integer    | null: false                    |
+| user                       | references | null: false, foreign_key: true |
+| card_type                  | string     | null: false                    |
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to :user
