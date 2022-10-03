@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 <br>
-<%= form_with model: @libraly, local: true do |f|%>
+
+<%= form_with url: "/librarys", method: :post, local: true do |f| %>
 
     <div class="container">
       <div class="row">
@@ -11,24 +12,40 @@
           <br>
 
             <div class="field">
-              <%= f.label :title, "カード名" %><br />
-              <%= f.text_field :title, id:"prototype_title", class: "form-control" %>
+              <%= f.label :card_name, "カード名" %><br />
+              <%= f.text_field :card_name, class: "form-control" %>
             </div>
 
             <div class="field">
-              <%= f.label :catch_copy, "マナコスト" %><br />
-              <%= f.text_field :catch_copy, class: :title, id:"prototype_catch_copy", class: "form-control" %>
+              <%= f.label :color, "色" %><br />
+              <%= f.text_field :color, class: :form__text, id:"prototype_concept", class: "form-control"%>
             </div>
 
             <div class="field">
-              <%= f.label :concept, "カードテキスト" %><br />
-              <%= f.text_area :concept, class: :form__text, id:"prototype_concept", class: "form-control"%>
+              <%= f.label :manacost, "マナコスト" %><br />
+              <%= f.text_field :manacost, class: :title, class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :card_text, "カードテキスト" %><br />
+              <%= f.text_area :card_text, class: :form__text, class: "form-control"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :color, "パワー" %><br />
+              <%= f.text_field :color, class: :form__text, class: "form-control"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :color, "タフネス" %><br />
+              <%= f.text_field :color, class: :form__text, class: "form-control"%>
             </div>
 
             <div class="field">
               <%= f.label :image, "カード画像" %><br />
-              <%= f.file_field :image, id:"prototype_image" %>
+              <%= f.file_field :image %>
             </div>
+            
 
             <div class="actions">
               <%= f.submit "保存する", class: :form__btn  %>
