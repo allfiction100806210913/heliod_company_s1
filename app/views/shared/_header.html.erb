@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "ライブラリ一覧", root_path, class: "navbar-brand" %>
+    <%= link_to "ライブラリ登録", new_library_path, class: "navbar-brand" %>
+    <%= link_to "デッキ登録", root_path, class: "navbar-brand" %>
+    <%= link_to "コンボ検証", root_path, class: "navbar-brand" %>
+    <%= link_to "ログイン", root_path, class: "navbar-brand" %>
+      <% if user_signed_in? %>
+        <br>
+         <div>
+             <span><%= current_user.player_name %>
+             <div class= "text-right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark btn-lg" %>
+             </div>
+          </span>
+         </div>
+        <% else %>
+               <div classs= "float-right">
+                <%= link_to "ログイン", new_user_session_path, class: "btn btn-dark btn-lg" %>
+                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark btn-lg" %>
+               </div>
+        <% end %>
+    </div>
+  </div>
+</nav>

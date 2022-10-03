@@ -1,0 +1,39 @@
+<%= render "shared/header" %>
+<br>
+<%= form_with model: @libraly, local: true do |f|%>
+
+    <div class="container">
+      <div class="row">
+        <div class="border col-5">
+
+          <br>
+          <h1>カード情報登録</h1>
+          <br>
+
+            <div class="field">
+              <%= f.label :title, "カード名" %><br />
+              <%= f.text_field :title, id:"prototype_title", class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :catch_copy, "マナコスト" %><br />
+              <%= f.text_field :catch_copy, class: :title, id:"prototype_catch_copy", class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :concept, "カードテキスト" %><br />
+              <%= f.text_area :concept, class: :form__text, id:"prototype_concept", class: "form-control"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :image, "カード画像" %><br />
+              <%= f.file_field :image, id:"prototype_image" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "保存する", class: :form__btn  %>
+            </div>
+        </div>
+      </div>
+    </div>
+<% end %>
