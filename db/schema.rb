@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_10_02_063933) do
     t.string "card_name", null: false
     t.string "manacost", null: false
     t.string "card_text", null: false
+    t.string "card_type", null: false
     t.string "color", null: false
     t.integer "power", null: false
     t.integer "toughness", null: false

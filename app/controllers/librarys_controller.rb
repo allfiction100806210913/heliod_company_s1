@@ -1,6 +1,6 @@
 class LibrarysController < ApplicationController
  def index
-  @library = Library.all
+  @librarys = Library.all
  end
 
  def new
@@ -8,7 +8,6 @@ class LibrarysController < ApplicationController
  end
 
  def create
-  binding.pry
   @library = Library.new(library_params)
   if @library.save
     redirect_to root_path
@@ -16,9 +15,14 @@ class LibrarysController < ApplicationController
     render :new
   end
  end
+ 
+ def show
+  @library = Library.find(params[:id])
+ end
 
+ private
  def library_params
-  params.require(:library).permit(:card_name, :manacost, :card_text, :color, :power, :toughness, :image).merge(user_id: current_user.id)
+  params.require(:library).permit(:card_name, :manacost, :card_text, :color, :power, :toughness, :image, :card_type).merge(user_id: current_user.id)
  end
 
 end
