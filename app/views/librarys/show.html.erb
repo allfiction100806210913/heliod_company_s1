@@ -55,8 +55,6 @@
     <div class="library_manage">
         <% if current_user == @library.user%>
            <%= link_to "編集する", edit_library_path(@library), class: "detail_title_btn" %>
-           <br>
-           <br>
            <%= link_to "削除する", library_path(@library), method: :delete, class: "detail_title_btn" %>
         <% end %>
     </div>

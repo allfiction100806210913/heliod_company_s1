@@ -33,6 +33,15 @@ class LibrarysController < ApplicationController
   end
  end
 
+ def destroy
+  if user_signed_in? && current_user.id == @library.user_id
+   @library.destroy
+   redirect_to root_path
+  else
+   redirect_to root_path
+  end
+ end
+
  private
  def library_params
   params.require(:library).permit(:card_name, :manacost, :card_text, :color, :power, :toughness, :image, :card_type).merge(user_id: current_user.id)

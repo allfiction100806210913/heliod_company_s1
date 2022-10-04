@@ -62,6 +62,12 @@ h1 {
   -webkit-animation: blink 12s infinite;
 }
 
+.shima{background-image: url("shima.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 @-webkit-keyframes blink {
   20%,
   24%,

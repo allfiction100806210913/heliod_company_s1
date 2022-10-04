@@ -4,9 +4,9 @@
     <%= link_to "ライブラリ登録", new_library_path, class: "navbar-brand" %>
     <%= link_to "デッキ登録", root_path, class: "navbar-brand" %>
     <%= link_to "コンボ検証", root_path, class: "navbar-brand" %>
- 
-      <% if user_signed_in? %>
-        <br>
+  </div>
+        <% if user_signed_in? %>
+         <br>
          <div>
              <span><%= current_user.player_name %>
              <div class= "text-right">
@@ -20,6 +20,4 @@
                 <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark btn-lg" %>
                </div>
         <% end %>
-    </div>
-  </div>
 </nav>
