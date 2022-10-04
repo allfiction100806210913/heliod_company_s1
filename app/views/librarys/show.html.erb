@@ -5,13 +5,19 @@
       </p>
     <div class="library_wrapper">
       <div class="library_image">
-       <%= image_tag @library.image %>
+       <%= image_tag @library.image, class: "show-image" %>
       </div>
       <div class="library_body">
         <div class="library_detail">
           <p class="detail__title">カード名</p>
           <p class="detail__message">
             <%= @library.card_name %>
+          </p>
+        </div>
+        <div class="library_detail">
+          <p class="detail__title">カードテキスト</p>
+          <p class="detail__message">
+            <%= @library.card_text %>
           </p>
         </div>
         <div class="library_detail">
@@ -27,6 +33,7 @@
           </p>
         </div>
         <div class="library_detail">
+          <p class="detail__title">カードタイプ</p>
           <p class="detail__message">
             <%= @library.card_type %>
           </p>
@@ -47,10 +54,10 @@
     </div>
     <div class="library_manage">
         <% if current_user == @library.user%>
-           <%= link_to "編集する", edit_library_path(@library), class: :prototype__btn %>
-           <%= link_to "削除する", library_path(@library), method: :delete, class: :prototype__btn %>
+           <%= link_to "編集する", edit_library_path(@library), class: "detail_title_btn" %>
+           <%= link_to "削除する", library_path(@library), method: :delete, class: "detail_title_btn" %>
         <% end %>
-      </div>
+    </div>
   </div>
 </main>
 <%= render "shared/footer"%>

@@ -33,6 +33,18 @@ h1 {
   -webkit-animation: blink 12s infinite;
 }
 
+.detail_title_btn{
+  font-size: calc(2px + 2vh);
+  line-height: calc(20px + 2vh);
+  text-shadow: 0 0 5px #ffa450, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: right;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
 .detail__message{font-size: calc(20px + 2vh);
   line-height: calc(20px + 2vh);
   text-shadow: 0 0 5px #57C3E9, 0 0 15px #ffa500, 0 0 20px #57C3E9, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
@@ -48,6 +60,12 @@ h1 {
   text-align: right;
   animation: blink 12s infinite;
   -webkit-animation: blink 12s infinite;
+}
+
+.shima{background-image: url("shima.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 @-webkit-keyframes blink {
@@ -106,7 +124,7 @@ body {
 .library_wrapper{
   display: flex;
   justify-content: flex-start;
-  min-height: calc(100vh - 161px);
+  min-height: calc(10vh - 16px);
 }
 .library_hedding{
   font-size: 24px;
@@ -137,7 +155,8 @@ body {
   font-weight: bold;
 }
 .library_manage{
-
+  display: flex;
+  justify-content: center;
   padding-top: 16px;
 }
 .library_btn{
@@ -153,5 +172,9 @@ body {
   margin: 0 4px;
 }
 
+.show-image{
+  width: 450px;
+  height: 600px;
 
+}
  

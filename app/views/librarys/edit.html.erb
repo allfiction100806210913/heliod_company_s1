@@ -1,0 +1,60 @@
+<%= render "shared/header" %>
+
+  <%= form_with model: @library, local: true do |f|%>
+
+    <div class="container">
+      <div class="row">
+        <div class="border col-5">
+
+          <br>
+          <h1>カード情報編集</h1>
+          <br>
+
+            <div class="field">
+              <%= f.label :card_name, "カード名", class: "detail__title_form"  %><br />
+              <%= f.text_field :card_name, class: "form-control btn-dark" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :color, "色", class: "detail__title_form"  %><br />
+              <%= f.text_field :color, class: :form__text, id:"prototype_concept", class: "form-control  btn-dark"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :manacost, "マナコスト", class: "detail__title_form"  %><br />
+              <%= f.text_field :manacost, class: "form-control  btn-dark" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :card_type, "カードタイプ", class: "detail__title_form"  %><br />
+              <%= f.text_field :card_type, class: :form__text, class: "form-control  btn-dark" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :card_text, "カードテキスト", class: "detail__title_form"  %><br />
+              <%= f.text_area :card_text, class: :form__text, class: "form-control  btn-dark"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :power, "パワー", class: "detail__title_form" %><br />
+              <%= f.text_field :power, class: :form__text, class: "form-control  btn-dark"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :toughness, "タフネス", class: "detail__title_form"  %><br />
+              <%= f.text_field :toughness, class: :form__text, class: "form-control  btn-dark"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :image, "カード画像", class: "detail__title_form"  %><br />
+              <%= f.file_field :image %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "保存する", class: "btn  btn-dark"  %>
+            </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<%= render "shared/footer"%>

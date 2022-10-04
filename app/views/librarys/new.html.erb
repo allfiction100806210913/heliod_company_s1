@@ -47,12 +47,7 @@
 
             <div class="field">
               <%= f.label :image, "カード画像", class: "detail__title_form"  %><br />
-              <%= f.file_field :image, class: "push", multiple: true, onchange: "loadImage(this);" %> %>
-            </div>
-
-            <%#ここに、画像のプレビューを表示したい%>
-            <div id="post_images" style="display: none;">
-               <p id="preview"></p>
+              <%= f.file_field :image %>
             </div>
 
             <div class="actions">
