@@ -1,11 +1,11 @@
 <%= render "shared/header" %>
 <br>
-<h1>card library</h1>
-  <% @librarys.each do |library| %>
-    <%= link_to library_path(library.id) do %>
-      <%= image_tag library.image, class: "item-img" %>
-    <% end %>
-  <% end %>
+    <h1>card library</h1>
+      <% @librarys.each do |library| %>
+        <%= link_to library_path(library.id) do %>
+          <%= image_tag library.image, class: "item-img" %>
+        <% end %>
+      <% end %>
   <br>
   <br>
   <br>
