@@ -7,31 +7,7 @@
       <div class="library_image">
        <%= image_tag @library.image, class: "show-image" %>
       </div>
-      <div class="library_body">
-        <div class="library_detail">
-          <p class="detail__title">カード名</p>
-          <p class="detail__message">
-            <%= @library.card_type %>
-          </p>
-        </div>
-        <div class="library_detail">
-          <p class="detail__title">カードテキスト</p>
-          <p class="detail__message">
-            <%= @library.card_text %>
-          </p>
-        </div>
-        <div class="library_detail">
-          <p class="detail__title">マナコスト</p>
-          <p class="detail__message">
-            <%= @library.manacost %>
-          </p>
-        </div>
-        <div class="library_detail">
-          <p class="detail__title">色</p>
-          <p class="detail__message">
-            <%= @library.color %>
-          </p>
-        </div>
+      
         <div class="library_detail">
           <p class="detail__title">カードタイプ</p>
           <p class="detail__message">
@@ -39,15 +15,10 @@
           </p>
         </div>
         <div class="library_detail">
-          <p class="detail__title">パワー</p>
+          <p class="detail__title">数値</p>
           <p class="detail__message">
-            <%= @library.power %>
-          </p>
-        </div>
-        <div class="library_detail">
-          <p class="detail__title">タフネス</p>
-          <p class="detail__message">
-            <%= @library.toughness %>
+            <%= @library.numbers %>
+
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 class LibrarysController < ApplicationController
   before_action :library_set, except: [:index, :new, :create]
-  #before_action :random_number, only: [:index]
+  before_action :library_rundam_all, only: [:index]
+  before_action :library_rundam_five, only: [:index]
 
  def index
   @librarys = Library.order("created_at DESC")
-  #@random = Library.find(random_number)
  end
 
  def new
@@ -52,7 +52,15 @@ class LibrarysController < ApplicationController
   @library = Library.find(params[:id])
  end
 
- #def random_number
-  #random_number = Library.pluck(:id).shuffle[0..5]
- #end
+ def library_rundam_all
+  @library_rundam_all = Library.order("RAND()")
+ end
+
+ def library_rundam_five
+  @library_rundam_five = Library.order("RAND()").limit(5)
+ end
+
+
+
+
 end

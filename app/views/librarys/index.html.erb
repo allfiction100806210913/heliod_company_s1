@@ -1,27 +1,10 @@
 <%= render "shared/header" %>
-<br>
+ <br>
+ 
  <div class="show-image">
-  <% card = Library.new %>
-  <% card = [] %>
-  <% @librarys.each do |libra| %>
-    <%#= image_tag libra.image, class: "show-image" %>
-  <% end %>
-  <br>
-  <% @librarys.each do |libra| %>
-   <% card.push(libra.image) %>
-    <%= image_tag card.sample %>
-  <% end %>
-
-   <%#= form_with model: @librarys do |f| %>
-          <%#= f.submit "送信", name: 'hoge', class: "navbar-brand" %>
-      <%# if f == 'hoge' %>
-        <%# @librarys.each do |library| %>
-          <%#= image_tag libra.image, class: "show-image" %>
-        <%# end %>
-      <%# end %>
-   <%# end %>
-
-
+    <% @library_rundam_all.each do |libra| %>
+       <%= image_tag libra.image, class: "show-image" %>
+    <% end %>
  </div>
 
   <br>
