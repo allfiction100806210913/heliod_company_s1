@@ -2,8 +2,9 @@
   <div class="container-fluid">
     <%= link_to "ライブラリ一覧", root_path, class: "navbar-brand" %>
     <%= link_to "ライブラリ登録", new_library_path, class: "navbar-brand" %>
-    <%= link_to "デッキ登録", root_path, class: "navbar-brand" %>
-    <%= link_to "コンボ検証", root_path, class: "navbar-brand" %>
+    <%= form_with model: @library do |form| %>
+        <%= form.submit "送信", name: 'hoge', class: "navbar-brand" %>
+    <% end %>
   </div>
         <% if user_signed_in? %>
          <br>

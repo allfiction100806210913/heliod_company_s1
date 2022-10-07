@@ -1,9 +1,10 @@
 class LibrarysController < ApplicationController
   before_action :library_set, except: [:index, :new, :create]
-
+  #before_action :random_number, only: [:index]
 
  def index
   @librarys = Library.order("created_at DESC")
+  #@random = Library.find(random_number)
  end
 
  def new
@@ -44,11 +45,14 @@ class LibrarysController < ApplicationController
 
  private
  def library_params
-  params.require(:library).permit(:card_name, :manacost, :card_text, :color, :power, :toughness, :image, :card_type).merge(user_id: current_user.id)
+  params.require(:library).permit(:card_type, :image, :numbers).merge(user_id: current_user.id)
  end
 
  def library_set
   @library = Library.find(params[:id])
  end
 
+ #def random_number
+  #random_number = Library.pluck(:id).shuffle[0..5]
+ #end
 end

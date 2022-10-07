@@ -37,20 +37,18 @@ ActiveRecord::Schema.define(version: 2022_10_04_103734) do
     t.bigint "card_name_id", null: false
     t.bigint "image_id", null: false
     t.integer "number_of_input", null: false
+    t.string "deck_name", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["card_name_id"], name: "index_decks_on_card_name_id"
     t.index ["image_id"], name: "index_decks_on_image_id"
+    t.index ["user_id"], name: "index_decks_on_user_id"
   end
 
   create_table "libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "card_name", null: false
-    t.string "manacost", null: false
-    t.string "card_text", null: false
     t.string "card_type", null: false
-    t.string "color", null: false
-    t.integer "power", null: false
-    t.integer "toughness", null: false
+    t.integer "numbers", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -71,5 +69,6 @@ ActiveRecord::Schema.define(version: 2022_10_04_103734) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "decks", "users"
   add_foreign_key "libraries", "users"
 end
