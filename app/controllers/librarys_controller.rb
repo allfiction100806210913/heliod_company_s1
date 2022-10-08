@@ -64,7 +64,7 @@ class LibrarysController < ApplicationController
 
             def library_hindu_shuffle
 
-              library_hindu_shuffle = Library.pluck
+              library_hindu_shuffle = Library.order("created_at DESC")
               hindo_1 = library_hindu_shuffle.last(rand(27..52))
               hindo_2 = hindo_1 + (library_hindu_shuffle - hindo_1)
               hindo_3 = hindo_2.last(rand(27..52))
@@ -85,8 +85,7 @@ class LibrarysController < ApplicationController
               hindo_18 = hindo_17 + (library_hindu_shuffle - hindo_17)
               hindo_19 = hindo_18.last(rand(27..53))
               hindo_20 = hindo_19 + (library_hindu_shuffle - hindo_19)
-
-
+              @hindo_shuffle = hindo_20
             end
 
 end

@@ -1,22 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<br>
   <div class="container-fluid">
-    <%= link_to "Random:5cards", root_path, class: "navbar-brand" %>
-    <%= link_to "Randam:all", root_path, class: "navbar-brand" %>
+    <%= link_to "開封直後へ(top)", root_path, class: "link_form" %>
+    <%= link_to "完全なシャッフル(Random_shoffle)", librarys_path, class: "link_form" %>
+    <%= link_to "ヒンドゥーシャッフル(hindo_shoffle)", decks_path, class: "link_form" %>
   
-  </div>
+
         <% if user_signed_in? %>
          <br>
-         <div>
+         <div class= "link_form">
              <span><%= current_user.player_name %>
-             <div class= "text-right">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark btn-lg" %>
+             <div class= "link_form">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "link_form" %>
              </div>
           </span>
          </div>
         <% else %>
-               <div classs= "float-right">
-                <%= link_to "ログイン", new_user_session_path, class: "btn btn-dark btn-lg" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark btn-lg" %>
+               <div classs= "link_form">
+                <%= link_to "ログイン", new_user_session_path, class: "link_form" %>
+                <%= link_to "新規登録", new_user_registration_path, class: "link_form" %>
                </div>
         <% end %>
-</nav>
+  </div>

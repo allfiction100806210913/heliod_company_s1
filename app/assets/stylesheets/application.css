@@ -83,6 +83,16 @@ h1 {
   text-shadow: 0 0 5px #ffa450, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+.link_form{font-size: calc(3px + 3vh);
+  line-height: calc(20px + 2vh);
+  text-shadow: 0 0 5px #ffa450, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
   text-align: right;
   animation: blink 12s infinite;
   -webkit-animation: blink 12s infinite;
@@ -140,7 +150,7 @@ h1 {
 body {
   background-image: url("Untitled.png");
   background-size: cover;
-  background-repeat: no-repeat;
+
 }
 
 .entry-title{
@@ -198,11 +208,10 @@ body {
   margin: 0 4px;
 }
 
-.show-image{
+.container{
   display: flex;
-  width: 130px;
-  height: 200px;
-  object-fit: cover;
+  flex-wrap: wrap;
+
 
 }
 
@@ -210,6 +219,19 @@ body {
 display: flex;
 width: 260px;
 height: 400px;
+
+}
+
+.show-image_all{
+  display: flex;
+  width: 130px;
+  height: 200px;
+
+
+
+
+
+
 
 }
 

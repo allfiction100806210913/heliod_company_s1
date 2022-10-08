@@ -1,10 +1,12 @@
 <%= render "shared/header" %>
  <br>
- <br>
- <br>
- <br>
- <div class="show-image_five">
-    <% @library_rundam_five.each do |libra| %>
+ <p class='Copyright'>
+   Shuffle&Inspectionは新品のトランプを開封した直後に各シャッフル方法の実施結果をシミュレートするツールです。<br>
+   ヘッダーからシャッフル方法を選択してください。シャッフルの詳細はその後表示されます。
+ </p>
+ 
+ <div class="show-image_all">
+    <% @library_rundam_all.each do |libra| %>
        <%= image_tag libra.image %>
     <% end %>
  </div>
