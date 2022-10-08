@@ -1,19 +1,12 @@
 <%= render "shared/header" %>
  <br>
- 
- <div class="show-image">
-    <% @library_rundam_all.each do |libra| %>
-       <%= image_tag libra.image, class: "show-image" %>
+ <br>
+ <br>
+ <br>
+ <div class="show-image_five">
+    <% @library_rundam_five.each do |libra| %>
+       <%= image_tag libra.image %>
     <% end %>
  </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <%= render "shared/footer"%>

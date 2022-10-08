@@ -206,6 +206,13 @@ body {
 
 }
 
+.show-image_five{
+display: flex;
+width: 260px;
+height: 400px;
+
+}
+
 .wrapper{
   display: grid;
 
