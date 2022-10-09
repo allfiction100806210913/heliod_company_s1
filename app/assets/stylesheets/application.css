@@ -148,7 +148,7 @@ h1 {
 
 
 body {
-  background-image: url("Untitled.png");
+  background-image: url("tramp.jpg");
   background-size: cover;
 
 }
@@ -210,8 +210,11 @@ body {
 
 .container{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-
+  align-content: flex-start;
+  width: 130px;
+  height: 200px;
 
 }
 
@@ -226,12 +229,12 @@ height: 400px;
   display: flex;
   width: 130px;
   height: 200px;
+}
 
-
-
-
-
-
+.show-image_top{
+  width: 130px;
+  height: 200px;
+  
 
 }
 
