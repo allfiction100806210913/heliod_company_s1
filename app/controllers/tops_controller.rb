@@ -1,6 +1,6 @@
 class TopsController < ApplicationController
-  
+
    def index
-    @tops = Library.order("created_at DESC")
+    @tops = Library.all
    end
 end
