@@ -1,0 +1,2 @@
+module RifflesHelper
+end

@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+ <br>
+      <p class='Copyright'>
+      リフルシャッフルはカードを2つの束に分けて1枚づつ交互に重ねていく手法です。<br>
+      今回はそれを2回行なった結果を出しています。開封後のカードを使っているので混ざっていない
+      ように見えますが、最もカードを効率よく混ぜることができます。
+      
+      </p>
+
+
+      <div class="show-image_all">
+        <% @riffle_shuffle.each do |libra| %>
+          <%= image_tag libra.image, class: "show-image_top" %>
+        <% end %>
+      </div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+
+
+  <%= render "shared/footer"%>

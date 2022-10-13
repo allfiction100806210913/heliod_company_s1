@@ -1,9 +1,11 @@
 
 <br>
   <div class="container-fluid">
-    <%= link_to "開封直後へ(top)", root_path, class: "link_form" %>
-    <%= link_to "完全なシャッフル(Random_shoffle)", librarys_path, class: "link_form" %>
-    <%= link_to "ヒンドゥーシャッフル(hindo_shoffle)", decks_path, class: "link_form" %>
+
+    <%= link_to "開封直後の状態(open)", opens_path, class: "link_form" %>
+    <%= link_to "完全なシャッフル(Random_shuffle)", librarys_path, class: "link_form" %>
+    <%= link_to "ヒンドゥーシャッフル(hindo_shuffle)", decks_path, class: "link_form" %>
+    <%= link_to "リフルシャッフル(riffle_shuffle)", riffles_path, class: "link_form" %>
   
 
         <% if user_signed_in? %>

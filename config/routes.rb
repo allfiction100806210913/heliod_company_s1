@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :librarys
   resources :decks
   resources :tops
+  resources :opens
+  resources :riffles
+  resources :farrows
+  
 end
