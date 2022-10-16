@@ -1,23 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<br>
   <div class="container-fluid">
-    <%= link_to "ライブラリ一覧", root_path, class: "navbar-brand" %>
-    <%= link_to "ライブラリ登録", new_library_path, class: "navbar-brand" %>
-    <%= link_to "デッキ登録", root_path, class: "navbar-brand" %>
-    <%= link_to "コンボ検証", root_path, class: "navbar-brand" %>
-  </div>
+
+    <%= link_to "開封直後の状態(open)", opens_path, class: "link_form" %>
+    <%= link_to "完全なシャッフル(Random_shuffle)", librarys_path, class: "link_form" %>
+    <%= link_to "ヒンドゥーシャッフル(hindo_shuffle)", decks_path, class: "link_form" %>
+    <%= link_to "リフルシャッフル(riffle_shuffle)", riffles_path, class: "link_form" %>
+  
+
         <% if user_signed_in? %>
          <br>
-         <div>
+         <div class= "link_form">
              <span><%= current_user.player_name %>
-             <div class= "text-right">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark btn-lg" %>
+             <div class= "link_form">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "link_form" %>
              </div>
           </span>
          </div>
         <% else %>
-               <div classs= "float-right">
-                <%= link_to "ログイン", new_user_session_path, class: "btn btn-dark btn-lg" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark btn-lg" %>
+               <div classs= "link_form">
+                <%= link_to "ログイン", new_user_session_path, class: "link_form" %>
+                <%= link_to "新規登録", new_user_registration_path, class: "link_form" %>
                </div>
         <% end %>
-</nav>
+  </div>

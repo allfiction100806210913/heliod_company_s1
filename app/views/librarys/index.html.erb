@@ -1,16 +1,14 @@
 <%= render "shared/header" %>
-<br>
-    <h1>card library</h1>
-      <% @librarys.each do |library| %>
-        <%= link_to library_path(library.id) do %>
-          <%= image_tag library.image, class: "item-img" %>
-        <% end %>
-      <% end %>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+ <br>
+ <p class='Copyright'>
+   コンピューターによる完全なランダムシャッフルの結果を表示しています。<br>
+   シャッフル結果は理想的で、これを再現するには複数のシャッフル手段を上手に組み合わせる必要があります。
+ </p>
+ 
+ <div class="show-image_all">
+    <% @library_rundam_all.each do |libra| %>
+       <%= image_tag libra.image, class: "show-image_top" %>
+    <% end %>
+ </div>
+
   <%= render "shared/footer"%>

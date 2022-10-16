@@ -1,4 +1,4 @@
-class LibrarysController < ApplicationController
+class DecksController < ApplicationController
   before_action :library_set, except: [:index, :new, :create, :show]
   before_action :library_rundam_all, only: [:index, :show]
   before_action :library_rundam_five, only: [:index, :show]

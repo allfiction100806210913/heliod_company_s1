@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+ <br>
+      <p class='Copyright'>
+       新品のトランプはこのような順番で並んでいます。ここから色々な方法でシャッフルを試し、<br>
+      その効果を検証してみてください。完全ランダムのシャッフルにはどうすれば近づけるでしょうか？
+      </p>
+
+    <div class="show-image_all">
+        <% @open.each do |libra| %>
+          <%= image_tag libra.image, class: "show-image_top" %>
+        <% end %>
+    </div>
+
+
+
+  <%= render "shared/footer"%>

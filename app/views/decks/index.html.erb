@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+ <br>
+ <p class='Copyright'>
+   ヒンドゥーシャッフルはデックを右手で下から半数以上持ち上げ、<br>
+   左手の束の上に10回重ねる方法を条件としています。これ単体ではあまりカードが混ざらないのがわかります。
+ </p>
+  <div class="show-image">
+    <div class="show-image_all">
+        <% @hindo_shuffle.each do |libra| %>
+          <%= image_tag libra.image, class: "show-image_top" %>
+        <% end %>
+    </div>
+  </div>
+  <%= render "shared/footer"%>
