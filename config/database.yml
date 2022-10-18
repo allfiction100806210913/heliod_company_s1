@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: heliod_company_s1_production
-  username: heliod_company_s1
-  password: <%= ENV['HELIOD_COMPANY_S1_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
