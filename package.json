@@ -1,5 +1,5 @@
 {
-  "name": "heliod_company_s1",
+  "name":"shuffle_inspection",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
